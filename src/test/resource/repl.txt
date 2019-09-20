@@ -1,0 +1,22 @@
+reset
+
+mempoke dpath.gpr.regs 1 10
+mempoke dpath.gpr.regs 2 8
+mempoke dpath.gpr.regs 3 1
+# mempoke dcache.cache 0 0xff
+mempoke icache.cache 0 0x00000083
+
+# mempoke icache.cache 0 0x003100b3
+# mempoke dpath.gpr.regs 1 10
+# mempoke dpath.gpr.regs 2 8
+# mempoke dpath.gpr.regs 3 1
+# step
+# mempeek dpath.gpr.regs 1
+#
+# mempoke icache.cache 1 0x403100b3
+# mempoke dpath.gpr.regs 1 10
+# mempoke dpath.gpr.regs 2 8
+# mempoke dpath.gpr.regs 3 1
+# step
+# mempeek dpath.gpr.regs 1
+

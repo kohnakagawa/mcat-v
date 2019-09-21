@@ -1,0 +1,10 @@
+reset
+
+mempoke icache.cache 0 0x001235b7 # lui a1,0x123
+mempoke icache.cache 1 0x00123617 # auipc a2,0x123
+step
+step
+
+mempeek dpath.gpr.regs 11
+mempeek dpath.gpr.regs 12
+

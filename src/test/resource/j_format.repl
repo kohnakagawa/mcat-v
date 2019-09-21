@@ -1,0 +1,5 @@
+reset
+
+mempoke icache.cache 0 0x006006ef # jal a3, 6
+# mempoke icache.cache 1 0x004586e7 # jalr a3,4(a1)
+# step

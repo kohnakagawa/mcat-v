@@ -51,5 +51,5 @@ class DataPath(implicit val p: Parameters) extends Module with CoreParams {
   io.dataIO.wrdata := gpr.io.rddata2
   io.dataIO.ldsext := ctrl.io.ldsext
 
-  pc := Mux(ctrl.io.pcFromAlu | bcu.io.result, alu.io.dst & (~1.U).asUInt, pcPlus4)
+  pc := Mux(ctrl.io.pcFromAlu | bcu.io.result, alu.io.dst & "hfffffffe".U(32.W), pcPlus4)
 }

@@ -7,4 +7,3 @@ object McatvRepl extends App {
   implicit val p = (new McatvConfig).toInstance
   iotesters.Driver.executeFirrtlRepl(args, () => new Top)
 }
-

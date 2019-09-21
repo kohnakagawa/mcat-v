@@ -39,6 +39,4 @@ class Immgen(implicit val p: Parameters) extends Module with CoreParams {
     IMM_B -> immB,
     IMM_S -> immS
   )).asUInt
-
-  // instruction の形式ごとにimmとしてどこを選択するかが変化する
 }

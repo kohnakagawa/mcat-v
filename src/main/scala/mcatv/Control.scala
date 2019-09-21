@@ -88,4 +88,5 @@ class Control(implicit val p: Parameters) extends Module with CoreParams {
   io.wrpcPlus4 := sigs(8)
   io.pcFromAlu := sigs(9)
   io.pcSrc1 := sigs(10)
+  io.bcuop := sigs(11)
 }

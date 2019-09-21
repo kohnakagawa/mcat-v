@@ -21,7 +21,7 @@ class DCacheIO(implicit p: Parameters) extends CoreBundle()(p) {
   val rddata = Output(UInt(xlen.W))
 }
 
-// NOTE: non-align の load/store に対して例外をだす
+// NOTE: non-align の load/store に対して例外をだす様に変更する必要あり
 class DCache(implicit val p: Parameters) extends Module with CoreParams {
   val io = IO(new DCacheIO())
 
@@ -72,9 +72,7 @@ class ICache(implicit val p: Parameters) extends Module with CoreParams {
   val io = IO(new ICacheIO())
 
   val cache = Mem(p(CACHE_SIZE), UInt(xlen.W))
-
   val index = (io.addr >> 2.U).asUInt
-
   io.rddata := cache(index)
 }
 
